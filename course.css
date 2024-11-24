@@ -1,0 +1,377 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+  }
+  .active{
+    color:#ef1a57 !important;
+  }
+  /* Navigation bar CSS */
+
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  nav {
+    width: 100%;
+    max-width: 1350px;
+    border-radius: 3.5rem;
+    border: 0.1rem #ef1a57 solid;
+    margin: 1rem 0rem;
+    padding: 1rem 0rem;
+  }
+  .navbar {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: "logo content contact";
+    height: 100%;
+    padding: 0rem 1.5rem;
+  }
+  .bar{
+    font-size: 1.8rem;
+    display: none;
+    margin: 0rem 1rem;
+  }
+  .sidebar{
+    background-color: #ef1a57;
+    height: 100vh;
+    width: 40%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: none;
+  }
+  .sidebar ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 2rem;
+  }
+  .sidebar ul li a{
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 2rem;
+  }
+  .cross{
+    font-size: 2.3rem;
+    color: white;
+  }
+  #sidebartoggle:checked + .sidebar{
+    display: flex;
+  }
+  .img {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+  .img p {
+    font-size: 2rem;
+    margin: 0rem 1rem;
+    color: #ef1a57;
+  }
+  .logo {
+    grid-area: logo;
+    height: 2rem;
+    width: 2rem;
+  }
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+  }
+  .content ul {
+    grid-area: content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+  }
+  .content ul li {
+    list-style: none;
+  }
+  .content ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+    transition: 0.3s ease-out;
+  }
+  .content ul li a:hover {
+    color: #ef1a57;
+  }
+  .search {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }
+  .but {
+    padding: 0.7rem 2rem;
+    background-color: #ef1a57;
+    border: none;
+    color: white;
+    border-radius: 999px;
+    font-size: 1.3rem;
+  }
+
+
+   /* Course Section CSS */
+
+   .info {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 6rem 0rem 2rem 0rem;
+  }
+  .type1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1500px;
+  }
+  .type1 p{
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 2rem 0rem;
+  }
+
+  .course-section {
+    width: 100%;
+  }
+  .courses {
+    max-width: 1400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;    
+    gap: 2rem;
+    margin: auto;
+  }
+  .c1,
+  .c2,
+  .c3,
+  .c4,
+  .c5,
+  .c6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 2rem;
+    border: 2px solid #ef1a57;
+    height: 400px;
+    width: 300px;
+    gap: 0.5rem;
+  }
+  .course-img {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+  }
+  .c1,
+  .c2,
+  .c3,
+  .c4,
+  .c5,
+  .c6 p {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  /* Footer CSS */
+
+  footer {
+    width: 100%;
+  }
+  .foot {
+    height: 500px;
+    margin: 5rem 0rem 0rem 0rem;
+    background-color: #ef1a57;
+    display: grid;
+    grid-template-columns: 1200px 300px 1fr;
+    gap: 3rem;
+  }
+  .f1 {
+    text-align: start;
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  .f1,.f2,.f3 h4 {
+    font-size: 2.5rem;
+  }
+  .f1 p {
+    font-size: 1.3rem;
+  }
+  .f1-child {
+    max-width: 400px;
+    width: 100%;
+  }
+
+  .f2,.f3 {
+    text-align: start;
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .f2 ul li{
+    font-size: 1.5rem;
+    list-style: none;
+  }
+  .f3 ul li{
+    font-size: 1.5rem;
+    list-style: none;
+  }
+ 
+  @media (max-width:1440px) {
+    .foot{
+      grid-template-columns: 600px 300px 1fr;
+    }
+  }
+
+  @media (max-width:768px){
+    nav{
+      margin: 1rem 2rem;
+    }
+    .herosection {
+      display: flex;
+  }
+    .content ul{
+      display: none;
+    }
+    .bar{
+      display: block;
+    }
+    .sidebar{
+      display: none;
+    }
+    .text {
+      font-size: 3rem;
+      padding: 0rem 2.5rem;
+    }
+    .but1 {
+      padding: 0.5rem 1.1rem;
+      font-size: 1rem;
+      margin: 0rem 3rem;
+    }
+    .pic{
+      padding-right: 1rem;
+    }
+    .border {
+      width: 23rem;
+      height: 23rem;
+      border: 2px #ef1a57 solid;
+      border-radius: 50%;
+    }
+    .img1 {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      padding: 0.7rem;
+    }
+    .foot{
+      height: 350px;
+      margin: 3rem 0rem 0rem 0rem;
+      gap: 1.2rem;
+      grid-template-columns: 340px 180px 180px;
+    }
+    .f1,.f2,.f3 h4 {
+      font-size: 1.5rem;
+    }
+    .f1 p {
+      font-size: 1rem;
+    }
+    .f1-child {
+      max-width: 300px;
+      width: 100%;
+    }
+    .f2 ul li{
+      font-size: 1rem;
+      list-style: none;
+    }
+    .f3 ul li{
+      font-size: 1rem;
+      list-style: none;
+    }
+  }
+
+  @media (max-width:390px){
+    nav{
+      margin: 0.7rem 1rem;
+      padding: 0.6rem 1rem;
+    }
+    .navbar{
+      padding: 0rem 0.5rem;
+    }
+    .img p{
+      font-size: 1.5rem;
+    }
+    .but {
+      padding: 0.4rem 1rem;
+      font-size: 1rem;
+    }
+    .herosection{
+      display: flex;
+      /* justify-content: center; */
+      flex-direction: column-reverse;
+      gap: 1.4rem;
+    }
+    .slogan{
+      text-align: center;
+    }
+    .text {
+      font-size: 2rem;
+      padding: 0rem 2rem;
+    }
+    .but1 {
+      padding: 0.3rem 0.8rem;
+      font-size: 1.2rem;
+      align-self: center;
+    }
+    .border {
+      width: 20rem;
+      height: 20rem;
+      border: 2px #ef1a57 solid;
+      border-radius: 50%;
+    }
+    .pic{
+      padding: 0;
+    }
+    .foot{
+      height: 350px;
+      margin: 2rem 0rem 0rem 0rem;
+      gap: 1rem;
+      padding:2rem 5rem;
+      display: flex;
+      /* align-item s: center; */
+      flex-direction: column;
+    }
+    .f1,.f2,.f3 h4 {
+      font-size: 1rem;
+    }
+    .f1 p {
+      font-size: 0.7rem;
+    }
+    .f1-child{
+     max-width: 200px;
+     width: 100%;
+    }
+    .f2 ul li{
+      font-size: 0.7rem;
+      list-style: none;
+    }
+    .f3 ul li{
+      font-size: 0.7rem;
+      list-style: none;
+    }
+    .f1 {
+      align-items: flex-start;
+  }
+    
+  }
