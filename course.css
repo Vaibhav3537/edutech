@@ -318,7 +318,6 @@
     }
     .herosection{
       display: flex;
-      /* justify-content: center; */
       flex-direction: column-reverse;
       gap: 1.4rem;
     }
@@ -349,7 +348,6 @@
       gap: 1rem;
       padding:2rem 5rem;
       display: flex;
-      /* align-item s: center; */
       flex-direction: column;
     }
     .f1,.f2,.f3 h4 {
